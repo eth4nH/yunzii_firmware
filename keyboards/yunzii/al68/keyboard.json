@@ -1,6 +1,6 @@
 {
     "manufacturer": "YUNZII Keyboard",
-    "keyboard_name": "AL68",
+    "keyboard_name": "YUNZII AL68",
     "maintainer": "Jeff",
     "bootloader": "stm32duino",
     "diode_direction": "ROW2COL",
@@ -24,6 +24,7 @@
     },
     "processor": "STM32F103",
     "rgb_matrix": {
+        "sleep": true,
         "animations": {
             "band_pinwheel_sat": true,
             "band_pinwheel_val": true,
@@ -122,9 +123,9 @@
     "url": "https://www.yunzii.com",
     "usb": {
         "device_version": "1.0.2",
-        "no_startup_check": true,
-        "pid": "0x304E",
-        "vid": "0x414A"
+        "no_startup_check": false,
+        "pid": "0x4D4B",
+        "vid": "0x304E"
     },
     "ws2812": {
         "driver": "pwm",

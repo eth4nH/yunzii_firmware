@@ -5,6 +5,7 @@
 #include "uart.h"
 #include "common/smart_ble.h"
 #include "al68.h"
+#include "ws2812.h"
 
 void keyboard_pre_init_kb(void) {
     AFIO->MAPR = (AFIO->MAPR & ~AFIO_MAPR_SWJ_CFG_Msk);
@@ -12,7 +13,7 @@ void keyboard_pre_init_kb(void) {
     gpio_set_pin_output(A8);
     gpio_write_pin_high(A8); // ENABLE USB
     uart_init(460800);
-    wait_ms(400);
+    ws2812_init();
 }
 
 bool process_record_kb(uint16_t keycode, keyrecord_t* record) {
